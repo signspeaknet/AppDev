@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: video-call-signaling-server
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    plan: free
+    region: oregon
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+
